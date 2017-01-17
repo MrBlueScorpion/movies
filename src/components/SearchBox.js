@@ -15,10 +15,10 @@ class SearchBox extends Component {
   }
 
   handleChange(e) {
+    this.props.searchMovie(e.target.value);
     this.setState({
       term: e.target.value
     });
-    this.props.searchMovie(this.state.term);
   }
 
   onAddMovie(movie) {
