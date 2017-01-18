@@ -51,17 +51,19 @@ class SearchBox extends Component {
 
   render() {
     return (
-      <form onSubmit={e => e.preventDefault()} style={style.container}>
-        <input
-          type="text"
-          placeholder="Search for movies..."
-          onChange={this.handleChange}
-          style={style.input}
-          className="form-control"
-          value={this.state.term}
-        />
+      <div>
+        <form onSubmit={e => e.preventDefault()} style={style.container}>
+          <input
+            type="text"
+            placeholder="Search for movies..."
+            onChange={this.handleChange}
+            style={style.input}
+            className="form-control"
+            value={this.state.term}
+          />
+        </form>
         {this.renderMovieList()}
-      </form>
+      </div>
     );
   }
 }

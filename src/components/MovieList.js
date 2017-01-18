@@ -3,6 +3,7 @@
  */
 import React, { Component, PropTypes } from 'react';
 import * as _ from 'lodash';
+import '../App.css';
 
 class MovieList extends Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class MovieList extends Component {
 
   render() {
     return (
-      <ul style={style.container}>
+      <ul style={style.container} className="ul">
         {this.props.movies.map(movie => {
           return (
             <li key={movie.imdbID} style={style.list}>
@@ -53,21 +54,22 @@ class MovieList extends Component {
 
 const style = {
   container: {
-    width: 600,
-    position: 'absolute',
-    paddingLeft: 0,
-    backgroundColor: 'white',
-    marginTop: -10
+    // width: 600,
+    // position: 'absolute',
+    // paddingLeft: 0,
+    // backgroundColor: 'white',
+    // marginTop: 300
+    //top: 30
+
   },
   list: {
     listStyleType: 'none',
     display: 'flex',
     justifyContent: 'space-between',
-    paddingTop: 10,
-    paddingBottom: 10,
+    padding: 10,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: 'grey',
+    borderColor: '#ccc'
   }
 };
 MovieList.propTypes = {

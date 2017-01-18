@@ -9,4 +9,20 @@
   border: 1px solid #ccc;
 }
 
+.ul {
+  width: 600px;
+  position: absolute;
+  padding-left: 0;
+  background-color: white;
+  /*margin-top: 300px;*/
+  top: 220px;
+}
+
+@-moz-document url-prefix() {
+  .ul {
+    /*margin-top: auto;*/
+    top: 220px;
+  }
+}
+
 
